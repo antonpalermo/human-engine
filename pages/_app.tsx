@@ -6,7 +6,7 @@ import '../styles/generic.css'
 import { ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'
 
 const client = new ApolloClient({
-  uri: 'https://human-engine.herokuapp.com/',
+  uri: 'https://human-engine.herokuapp.com',
   cache: new InMemoryCache(),
   credentials: 'include',
 })

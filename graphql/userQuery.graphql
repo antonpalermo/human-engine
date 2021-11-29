@@ -1,0 +1,50 @@
+type User {
+  firstname: String!
+  lastname: String!
+  email: String!
+  password: String!
+}
+
+query Users {
+  users {
+    id
+    firstname
+    lastname
+    email
+    dateCreated
+    dateUpdated
+  }
+}
+
+mutation Create($payload: UserData!) {
+  create(user: $payload) {
+    id
+    firstname
+    lastname
+    email
+    dateCreated
+    dateUpdated
+  }
+}
+
+mutation Delete($id: String!) {
+  delete(id: $id) {
+    id
+    firstname
+    lastname
+    email
+    dateCreated
+    dateUpdated
+  }
+}
+
+mutation Update($id: String!, $payload: UserData!) {
+  update(id: $id, user: $payload) {
+    id
+    firstname
+    lastname
+    email
+    dateCreated
+    dateUpdated
+  }
+}

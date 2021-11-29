@@ -7,7 +7,8 @@
     "dev": "next dev",
     "lint": "next dev",
     "build": "next build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,18 @@
   "homepage": "https://github.com/antonpalermo/human-engine#readme",
   "dependencies": {
     "@apollo/client": "^3.5.5",
+    "formik": "^2.2.9",
     "graphql": "^15.3.1",
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.3.0",
+    "@graphql-codegen/introspection": "2.1.0",
+    "@graphql-codegen/typescript": "2.4.1",
+    "@graphql-codegen/typescript-operations": "2.2.1",
+    "@graphql-codegen/typescript-react-apollo": "3.2.2",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.37",
     "prettier": "^2.5.0",
