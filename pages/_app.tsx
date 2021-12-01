@@ -5,13 +5,13 @@ import '../styles/generic.css'
 
 import { ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'
 
-const client = new ApolloClient({
-  uri: 'https://human-engine.herokuapp.com',
-  cache: new InMemoryCache(),
-  credentials: 'include',
-})
-
 const App: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
+  const client = new ApolloClient({
+    uri: `${process.env.NEXT_PUBLIC_APOLLO_GQL_CLIENT}`,
+    cache: new InMemoryCache(),
+    credentials: 'include',
+  })
+
   return (
     <ApolloProvider client={client}>
       <Component {...pageProps} />
